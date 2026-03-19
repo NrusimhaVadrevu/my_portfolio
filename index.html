@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nrusimha Vadrevu | Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portfolio of Nrusimha Vadrevu, Frontend Developer & Cybersecurity Student at KIET Kakinada.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="blob-bg"></div>
+    <div class="container" id="app">
+        <header class="header">
+            <div class="logo">SIMBA.</div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="hi">HI</button>
+                <button class="lang-btn" data-lang="te">TE</button>
+            </div>
+        </header>
+
+        <main class="bento-grid">
+            <!-- Intro Card (Large) -->
+            <div class="bento-card hero-card card-span-2 card-row-2">
+                <div class="hero-content">
+                    <div class="profile-img-container">
+                        <!-- Please place your profile image as profile.jpg in the same folder -->
+                        <img src="profile.jpeg " alt="Nrusimha Vadrevu" class="profile-img"
+                            onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Nrusimha+V&background=0D8ABC&color=fff&size=150'">
+                    </div>
+                    <h1 class="t-name">Hi, I'm <span class="highlight">Nrusimha Vadrevu</span></h1>
+                    <h2 class="t-role">Frontend Developer & Cybersecurity Student</h2>
+                    <p class="t-bio">I’m a Computer Science (Cybersecurity) student at KIET Kakinada building practical,
+                        user-focused web projects. I create tech content around programming to simplify concepts and
+                        share what I learn.</p>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="bento-card skills-card">
+                <h3 class="t-skills-heading"><ion-icon name="code-slash-outline"></ion-icon> Core Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-tag html">HTML5</span>
+                    <span class="skill-tag css">CSS3</span>
+                    <span class="skill-tag python">Python</span>
+                    <span class="skill-tag js">JavaScript</span>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="bento-card achievement-card">
+                <h3 class="t-achieve-heading"><ion-icon name="trophy-outline"></ion-icon> Achievements</h3>
+                <p class="t-codevita">Reached the final round of <strong class="highlight-text">TCS CodeVita</strong>,
+                    demonstrating strong problem-solving and consistency under pressure.</p>
+            </div>
+
+            <!-- Focus Area -->
+            <div class="bento-card focus-card card-span-2">
+                <h3 class="t-focus-heading"><ion-icon name="shield-checkmark-outline"></ion-icon> Cybersecurity Focus
+                </h3>
+                <p class="t-cyber">Actively building my foundation in cybersecurity, focusing on real-world skills over
+                    theory. I believe in practical applications and defensive programming.</p>
+            </div>
+
+            <!-- Languages -->
+            <div class="bento-card langs-card">
+                <h3 class="t-langs-heading"><ion-icon name="language-outline"></ion-icon> Languages</h3>
+                <ul class="lang-list">
+                    <li>English</li>
+                    <li>Telugu</li>
+                    <li>Hindi</li>
+                </ul>
+            </div>
+
+            <!-- Socials -->
+            <div class="bento-card socials-card">
+                <h3 class="t-contact-heading"><ion-icon name="people-outline"></ion-icon> Let's Connect</h3>
+                <div class="social-links">
+                    <a href="mailto:nrusimhavadrevu@gmail.com" class="social-btn email" target="_blank"
+                        rel="noopener noreferrer">
+                        <ion-icon name="mail-outline"></ion-icon> Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/nrusimha-vadrevu-54181136a" class="social-btn linkedin"
+                        target="_blank" rel="noopener noreferrer">
+                        <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
+                    </a>
+                    <a href="https://x.com/i_nrusimha" class="social-btn x-twitter" target="_blank"
+                        rel="noopener noreferrer">
+                        <ion-icon name="logo-twitter"></ion-icon> X (Twitter)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tech Content -->
+            <div class="bento-card content-card card-span-2">
+                <h3 class="t-content-heading"><ion-icon name="videocam-outline"></ion-icon> Tech Content Creator</h3>
+                <p class="t-content-desc">I simplify complex programming concepts and share my learning journey with the
+                    community. Believer in learning by teaching.</p>
+                <a href="https://www.instagram.com/i_nrusimha/" class="social-btn instagram content-btn" target="_blank"
+                    rel="noopener noreferrer">
+                    <ion-icon name="logo-instagram"></ion-icon> Follow on Instagram
+                </a>
+            </div>
+
+            <!-- Location -->
+            <div class="bento-card location-card">
+                <h3 class="t-location-heading"><ion-icon name="location-outline"></ion-icon> Location</h3>
+                <a href="https://maps.app.goo.gl/SYCxsLGoWcNumJACA" class="location-body" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                    <div class="map-mockup">
+                        <div class="pulse"></div>
+                    </div>
+                    <p>Amalapuram</p>
+                </a>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
