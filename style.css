@@ -858,6 +858,92 @@ h3 ion-icon {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
+/* Skills Tab Styling */
+.skills-hero-card {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(168, 85, 247, 0.15) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    text-align: center;
+    padding: 2.8rem 2rem;
+}
+
+.skills-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.skills-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.skills-hero-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.skills-hero-content p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.skill-domain-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.domain-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.domain-icon {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 18px;
+    flex-shrink: 0;
+}
+
+.prog-icon { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+.tech-icon { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+.content-icon { background: rgba(234, 179, 8, 0.15); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }
+.prof-icon { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+
+.domain-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.domain-header p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .bento-grid {
@@ -870,7 +956,7 @@ h3 ion-icon {
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .connect-option-card {
+    .connect-option-card, .domain-header {
         flex-direction: column;
         align-items: flex-start;
     }

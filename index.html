@@ -30,6 +30,10 @@
                     <ion-icon name="grid-outline"></ion-icon>
                     <span class="t-nav-home">Home</span>
                 </button>
+                <button class="tab-btn" data-tab="skills">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                    <span class="t-nav-skills">Skills</span>
+                </button>
                 <button class="tab-btn" data-tab="projects">
                     <ion-icon name="folder-open-outline"></ion-icon>
                     <span class="t-nav-projects">Projects</span>
@@ -62,58 +66,6 @@
                             practical,
                             user-focused web projects. I create tech content around programming to simplify concepts and
                             share what I learn.</p>
-                    </div>
-                </div>
-
-                <!-- Skills -->
-                <div class="bento-card skills-card card-span-2">
-                    <h3 class="t-skills-heading"><ion-icon name="code-slash-outline"></ion-icon> Core Skills</h3>
-                    <div class="skills-categories-grid">
-                        <!-- Programming -->
-                        <div class="skill-category">
-                            <h4 class="skill-cat-title"><ion-icon name="code-outline"></ion-icon> Programming</h4>
-                            <div class="skills-list">
-                                <span class="skill-tag python">Python</span>
-                                <span class="skill-tag c-lang">C</span>
-                                <span class="skill-tag html">HTML</span>
-                                <span class="skill-tag css">CSS</span>
-                            </div>
-                        </div>
-
-                        <!-- Technical -->
-                        <div class="skill-category">
-                            <h4 class="skill-cat-title"><ion-icon name="hardware-chip-outline"></ion-icon> Technical</h4>
-                            <div class="skills-list">
-                                <span class="skill-tag">Data Structures in C</span>
-                                <span class="skill-tag">Git & GitHub</span>
-                                <span class="skill-tag">IoT Fundamentals</span>
-                            </div>
-                        </div>
-
-                        <!-- Content & Marketing -->
-                        <div class="skill-category">
-                            <h4 class="skill-cat-title"><ion-icon name="megaphone-outline"></ion-icon> Content & Marketing</h4>
-                            <div class="skills-list">
-                                <span class="skill-tag">Content Strategy</span>
-                                <span class="skill-tag">Content Writing</span>
-                                <span class="skill-tag">Technical Content Creation</span>
-                                <span class="skill-tag">Personal Branding</span>
-                                <span class="skill-tag">Social Media Marketing</span>
-                            </div>
-                        </div>
-
-                        <!-- Professional -->
-                        <div class="skill-category">
-                            <h4 class="skill-cat-title"><ion-icon name="briefcase-outline"></ion-icon> Professional</h4>
-                            <div class="skills-list">
-                                <span class="skill-tag">Project Management</span>
-                                <span class="skill-tag">Communication</span>
-                                <span class="skill-tag">Public Speaking</span>
-                                <span class="skill-tag">Leadership</span>
-                                <span class="skill-tag">Problem Solving</span>
-                                <span class="skill-tag">Team Collaboration</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -177,6 +129,95 @@
                         </div>
                         <p>Amalapuram</p>
                     </a>
+                </div>
+            </div>
+
+            <!-- Skills Tab Pane -->
+            <div id="skills-tab" class="bento-grid tab-pane">
+                <div class="bento-card skills-hero-card card-span-4">
+                    <div class="skills-hero-content">
+                        <span class="skills-badge"><ion-icon name="sparkles-outline"></ion-icon> Expertise & Capabilities</span>
+                        <h2 class="t-skills-hero-title">Core Skills & Competencies</h2>
+                        <p class="t-skills-hero-desc">A structured overview of my technical knowledge, programming foundation, content creation, and professional capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Programming Category Card -->
+                <div class="bento-card skill-domain-card card-span-2">
+                    <div class="domain-header">
+                        <div class="domain-icon prog-icon">
+                            <ion-icon name="code-slash-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <h3>Programming</h3>
+                            <p>Core programming languages for software and web development.</p>
+                        </div>
+                    </div>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag python">Python</span>
+                        <span class="skill-tag c-lang">C</span>
+                        <span class="skill-tag html">HTML</span>
+                        <span class="skill-tag css">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Technical Category Card -->
+                <div class="bento-card skill-domain-card card-span-2">
+                    <div class="domain-header">
+                        <div class="domain-icon tech-icon">
+                            <ion-icon name="hardware-chip-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <h3>Technical</h3>
+                            <p>Core engineering concepts, version control, and IoT systems.</p>
+                        </div>
+                    </div>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag">Data Structures in C</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">IoT Fundamentals</span>
+                    </div>
+                </div>
+
+                <!-- Content & Marketing Category Card -->
+                <div class="bento-card skill-domain-card card-span-2">
+                    <div class="domain-header">
+                        <div class="domain-icon content-icon">
+                            <ion-icon name="megaphone-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <h3>Content & Marketing</h3>
+                            <p>Strategic content creation, personal branding, and audience growth.</p>
+                        </div>
+                    </div>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag">Content Strategy</span>
+                        <span class="skill-tag">Content Writing</span>
+                        <span class="skill-tag">Technical Content Creation</span>
+                        <span class="skill-tag">Personal Branding</span>
+                        <span class="skill-tag">Social Media Marketing</span>
+                    </div>
+                </div>
+
+                <!-- Professional Category Card -->
+                <div class="bento-card skill-domain-card card-span-2">
+                    <div class="domain-header">
+                        <div class="domain-icon prof-icon">
+                            <ion-icon name="briefcase-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <h3>Professional</h3>
+                            <p>Essential soft skills, leadership, and collaborative execution.</p>
+                        </div>
+                    </div>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Public Speaking</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Team Collaboration</span>
+                    </div>
                 </div>
             </div>
 
