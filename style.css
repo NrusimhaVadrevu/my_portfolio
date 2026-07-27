@@ -157,7 +157,250 @@ body {
 /* Grid Spanning */
 .card-span-2 { grid-column: span 2; }
 .card-span-3 { grid-column: span 3; }
+.card-span-4 { grid-column: span 4; }
 .card-row-2 { grid-row: span 2; }
+
+/* Tab Navigation */
+.nav-tabs {
+    display: flex;
+    gap: 0.4rem;
+    background: var(--card-bg);
+    padding: 0.35rem;
+    border-radius: 24px;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 18px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-btn ion-icon {
+    font-size: 1.1rem;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    background: var(--gradient-1);
+    color: #ffffff;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* Tab Panes */
+.tab-pane {
+    display: none;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.tab-pane.active {
+    display: grid;
+}
+
+/* Project Cards */
+.project-card {
+    justify-content: space-between;
+    gap: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.project-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: max-content;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.project-badge.iot { background: rgba(99, 102, 241, 0.15); color: #818cf8; border-color: rgba(99, 102, 241, 0.3); }
+.project-badge.web { background: rgba(14, 165, 233, 0.15); color: #38bdf8; border-color: rgba(14, 165, 233, 0.3); }
+.project-badge.tool { background: rgba(234, 179, 8, 0.15); color: #facc15; border-color: rgba(234, 179, 8, 0.3); }
+.project-badge.portfolio { background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3); }
+
+.project-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0;
+}
+
+.project-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.project-tags {
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.project-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.2rem;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+}
+
+.project-btn.demo-btn {
+    background: var(--gradient-1);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.25);
+}
+
+.project-btn.demo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+}
+
+.project-btn.code-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.project-btn.code-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* GitHub Banner Card (Bottom of Projects Tab) */
+.github-banner-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    margin-top: 0.5rem;
+}
+
+.github-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.github-icon-wrapper {
+    font-size: 3rem;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 1.2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.github-banner-text {
+    flex: 1;
+}
+
+.github-banner-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+}
+
+.github-banner-text p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.github-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.8rem;
+    background: #f8fafc;
+    color: #0f172a;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.github-cta-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(56, 189, 248, 0.35);
+    color: #0284c7;
+}
+
+/* Responsive adjustments for GitHub banner and tabs */
+@media (max-width: 868px) {
+    .github-banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+    .github-cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .card-span-4 { grid-column: span 2; }
+}
+
+@media (max-width: 580px) {
+    .card-span-4 { grid-column: span 1; }
+    .header {
+        align-items: center;
+    }
+    .nav-tabs {
+        width: 100%;
+        justify-content: center;
+    }
+}
 
 /* Hero / Profile Card */
 .hero-card {
@@ -414,6 +657,157 @@ h3 ion-icon {
 .bento-card:nth-child(7) { animation-delay: 0.7s; }
 .bento-card:nth-child(8) { animation-delay: 0.8s; }
 
+/* Achievements List */
+.achievement-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    z-index: 2;
+}
+
+.achievement-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 0.9rem 1.1rem;
+    border-radius: 16px;
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.achievement-list li:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+    color: var(--text-primary);
+}
+
+.achieve-icon {
+    font-size: 1.5rem;
+    color: #eab308;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+/* Connect Tab Styles */
+.connect-hero-card {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(99, 102, 241, 0.15) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    text-align: center;
+    padding: 2.8rem 2rem;
+}
+
+.connect-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.connect-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.connect-hero-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.connect-hero-content p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.connect-option-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.connect-card-icon {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.email-icon { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.linkedin-icon { background: rgba(10, 102, 194, 0.15); color: #60a5fa; border: 1px solid rgba(10, 102, 194, 0.3); }
+.twitter-icon { background: rgba(255, 255, 255, 0.1); color: #f8fafc; border: 1px solid rgba(255, 255, 255, 0.2); }
+.instagram-icon { background: rgba(225, 48, 108, 0.15); color: #f472b6; border: 1px solid rgba(225, 48, 108, 0.3); }
+.github-icon { background: rgba(56, 189, 248, 0.15); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.3); }
+
+.connect-card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.connect-card-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+}
+
+.connect-card-info p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.connect-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    width: max-content;
+    transition: all 0.3s ease;
+    font-family: var(--font-heading);
+}
+
+.connect-link-btn.email { background: rgba(239, 68, 68, 0.1); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.2); }
+.connect-link-btn.linkedin { background: rgba(10, 102, 194, 0.1); color: #60a5fa; border: 1px solid rgba(10, 102, 194, 0.2); }
+.connect-link-btn.twitter { background: rgba(255, 255, 255, 0.08); color: var(--text-primary); border: 1px solid rgba(255, 255, 255, 0.15); }
+.connect-link-btn.instagram { background: rgba(225, 48, 108, 0.1); color: #f472b6; border: 1px solid rgba(225, 48, 108, 0.2); }
+.connect-link-btn.github { background: rgba(56, 189, 248, 0.1); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.2); }
+
+.connect-link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .bento-grid {
@@ -425,6 +819,10 @@ h3 ion-icon {
 @media (max-width: 868px) {
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .connect-option-card {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 

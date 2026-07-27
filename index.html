@@ -25,6 +25,20 @@
     <div class="container" id="app">
         <header class="header">
             <div class="logo">SIMBA.</div>
+            <nav class="nav-tabs">
+                <button class="tab-btn active" data-tab="home">
+                    <ion-icon name="grid-outline"></ion-icon>
+                    <span class="t-nav-home">Home</span>
+                </button>
+                <button class="tab-btn" data-tab="projects">
+                    <ion-icon name="folder-open-outline"></ion-icon>
+                    <span class="t-nav-projects">Projects</span>
+                </button>
+                <button class="tab-btn" data-tab="connect">
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                    <span class="t-nav-connect">Let's Connect</span>
+                </button>
+            </nav>
             <div class="lang-switcher">
                 <button class="lang-btn active" data-lang="en">EN</button>
                 <button class="lang-btn" data-lang="hi">HI</button>
@@ -32,98 +46,289 @@
             </div>
         </header>
 
-        <main class="bento-grid">
-            <!-- Intro Card (Large) -->
-            <div class="bento-card hero-card card-span-2 card-row-2">
-                <div class="hero-content">
-                    <div class="profile-img-container">
-                        <!-- Please place your profile image as profile.jpg in the same folder -->
-                        <img src="profile.jpeg " alt="Nrusimha Vadrevu" class="profile-img"
-                            onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Nrusimha+V&background=0D8ABC&color=fff&size=150'">
+        <main class="tab-container">
+            <!-- Home Tab Pane -->
+            <div id="home-tab" class="bento-grid tab-pane active">
+                <!-- Intro Card (Large) -->
+                <div class="bento-card hero-card card-span-2 card-row-2">
+                    <div class="hero-content">
+                        <div class="profile-img-container">
+                            <img src="profile.jpeg" alt="Nrusimha Vadrevu" class="profile-img"
+                                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Nrusimha+V&background=0D8ABC&color=fff&size=150'">
+                        </div>
+                        <h1 class="t-name">Hi, I'm <span class="highlight">Nrusimha Vadrevu</span></h1>
+                        <h2 class="t-role">Frontend Developer & Cybersecurity Student</h2>
+                        <p class="t-bio">I’m a Computer Science (Cybersecurity) student at KIET Kakinada building practical,
+                            user-focused web projects. I create tech content around programming to simplify concepts and
+                            share what I learn.</p>
                     </div>
-                    <h1 class="t-name">Hi, I'm <span class="highlight">Nrusimha Vadrevu</span></h1>
-                    <h2 class="t-role">Frontend Developer & Cybersecurity Student</h2>
-                    <p class="t-bio">I’m a Computer Science (Cybersecurity) student at KIET Kakinada building practical,
-                        user-focused web projects. I create tech content around programming to simplify concepts and
-                        share what I learn.</p>
                 </div>
-            </div>
 
-            <!-- Skills -->
-            <div class="bento-card skills-card">
-                <h3 class="t-skills-heading"><ion-icon name="code-slash-outline"></ion-icon> Core Skills</h3>
-                <div class="skills-list">
-                    <span class="skill-tag html">HTML5</span>
-                    <span class="skill-tag css">CSS3</span>
-                    <span class="skill-tag python">Python</span>
-                    <span class="skill-tag js">JavaScript</span>
-                </div>
-            </div>
-
-            <!-- Achievements -->
-            <div class="bento-card achievement-card">
-                <h3 class="t-achieve-heading"><ion-icon name="trophy-outline"></ion-icon> Achievements</h3>
-                <p class="t-codevita">Reached the final round of <strong class="highlight-text">TCS CodeVita</strong>,
-                    demonstrating strong problem-solving and consistency under pressure.</p>
-            </div>
-
-            <!-- Focus Area -->
-            <div class="bento-card focus-card card-span-2">
-                <h3 class="t-focus-heading"><ion-icon name="shield-checkmark-outline"></ion-icon> Cybersecurity Focus
-                </h3>
-                <p class="t-cyber">Actively building my foundation in cybersecurity, focusing on real-world skills over
-                    theory. I believe in practical applications and defensive programming.</p>
-            </div>
-
-            <!-- Languages -->
-            <div class="bento-card langs-card">
-                <h3 class="t-langs-heading"><ion-icon name="language-outline"></ion-icon> Languages</h3>
-                <ul class="lang-list">
-                    <li>English</li>
-                    <li>Telugu</li>
-                    <li>Hindi</li>
-                </ul>
-            </div>
-
-            <!-- Socials -->
-            <div class="bento-card socials-card">
-                <h3 class="t-contact-heading"><ion-icon name="people-outline"></ion-icon> Let's Connect</h3>
-                <div class="social-links">
-                    <a href="mailto:nrusimhavadrevu@gmail.com" class="social-btn email" target="_blank"
-                        rel="noopener noreferrer">
-                        <ion-icon name="mail-outline"></ion-icon> Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/nrusimha-vadrevu-54181136a" class="social-btn linkedin"
-                        target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
-                    </a>
-                    <a href="https://x.com/i_nrusimha" class="social-btn x-twitter" target="_blank"
-                        rel="noopener noreferrer">
-                        <ion-icon name="logo-twitter"></ion-icon> X (Twitter)
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tech Content -->
-            <div class="bento-card content-card card-span-2">
-                <h3 class="t-content-heading"><ion-icon name="videocam-outline"></ion-icon> Tech Content Creator</h3>
-                <p class="t-content-desc">I simplify complex programming concepts and share my learning journey with the
-                    community. Believer in learning by teaching.</p>
-                <a href="https://www.instagram.com/i_nrusimha/" class="social-btn instagram content-btn" target="_blank"
-                    rel="noopener noreferrer">
-                    <ion-icon name="logo-instagram"></ion-icon> Follow on Instagram
-                </a>
-            </div>
-
-            <!-- Location -->
-            <div class="bento-card location-card">
-                <h3 class="t-location-heading"><ion-icon name="location-outline"></ion-icon> Location</h3>
-                <a href="https://maps.app.goo.gl/SYCxsLGoWcNumJACA" class="location-body" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                    <div class="map-mockup">
-                        <div class="pulse"></div>
+                <!-- Skills -->
+                <div class="bento-card skills-card">
+                    <h3 class="t-skills-heading"><ion-icon name="code-slash-outline"></ion-icon> Core Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag html">HTML5</span>
+                        <span class="skill-tag css">CSS3</span>
+                        <span class="skill-tag python">Python</span>
+                        <span class="skill-tag js">JavaScript</span>
                     </div>
-                    <p>Amalapuram</p>
-                </a>
+                </div>
+
+                <!-- Achievements -->
+                <div class="bento-card achievement-card card-span-2">
+                    <h3 class="t-achieve-heading"><ion-icon name="trophy-outline"></ion-icon> Achievements</h3>
+                    <ul class="achievement-list">
+                        <li class="t-achieve-1">
+                            <ion-icon name="ribbon-outline" class="achieve-icon"></ion-icon>
+                            <span>Secured a <strong>Global Rank of 2403</strong> in TCS CodeVita Season 13 🌍</span>
+                        </li>
+                        <li class="t-achieve-2">
+                            <ion-icon name="medal-outline" class="achieve-icon"></ion-icon>
+                            <span><strong>Top 32 Finalist – India Innovates 2026</strong> (Bharat Mandapam, New Delhi) | Built <em>Prajanetra</em> from concept to working prototype under tight deadlines.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Focus Area -->
+                <div class="bento-card focus-card card-span-2">
+                    <h3 class="t-focus-heading"><ion-icon name="shield-checkmark-outline"></ion-icon> Cybersecurity Focus
+                    </h3>
+                    <p class="t-cyber">Actively building my foundation in cybersecurity, focusing on real-world skills over
+                        theory. I believe in practical applications and defensive programming.</p>
+                </div>
+
+                <!-- Languages -->
+                <div class="bento-card langs-card">
+                    <h3 class="t-langs-heading"><ion-icon name="language-outline"></ion-icon> Languages</h3>
+                    <ul class="lang-list">
+                        <li>English</li>
+                        <li>Telugu</li>
+                        <li>Hindi</li>
+                    </ul>
+                </div>
+
+                <!-- Tech Content -->
+                <div class="bento-card content-card card-span-2">
+                    <h3 class="t-content-heading"><ion-icon name="videocam-outline"></ion-icon> Tech Content Creator</h3>
+                    <p class="t-content-desc">I simplify complex programming concepts and share my learning journey with the
+                        community. Believer in learning by teaching.</p>
+                    <a href="https://www.instagram.com/cybersimba.ai/" class="social-btn instagram content-btn" target="_blank"
+                        rel="noopener noreferrer">
+                        <ion-icon name="logo-instagram"></ion-icon> Follow @cybersimba.ai
+                    </a>
+                </div>
+
+                <!-- Location -->
+                <div class="bento-card location-card">
+                    <h3 class="t-location-heading"><ion-icon name="location-outline"></ion-icon> Location</h3>
+                    <a href="https://maps.app.goo.gl/SYCxsLGoWcNumJACA" class="location-body" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <div class="map-mockup">
+                            <div class="pulse"></div>
+                        </div>
+                        <p>Amalapuram</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projects Tab Pane -->
+            <div id="projects-tab" class="bento-grid tab-pane">
+                <!-- ClassSync Project -->
+                <div class="bento-card project-card card-span-2">
+                    <div class="project-header">
+                        <span class="project-badge iot"><ion-icon name="hardware-chip-outline"></ion-icon> IoT & 3D Twin</span>
+                        <h3 class="project-title">ClassSync</h3>
+                    </div>
+                    <p class="t-class-sync-desc project-desc">Smart Classroom Visualization Platform combining IoT, Embedded C, Data Structures in C, and Python to simulate attendance-driven classroom automation with Three.js 3D digital twin.</p>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag">Three.js</span>
+                        <span class="skill-tag python">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">IoT / ESP32</span>
+                        <span class="skill-tag">Embedded C</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://nrusimhavadrevu.github.io/ClassSync/" target="_blank" rel="noopener noreferrer" class="project-btn demo-btn">
+                            <ion-icon name="globe-outline"></ion-icon> <span class="t-live-demo">Live Website</span>
+                        </a>
+                        <a href="https://github.com/NrusimhaVadrevu/ClassSync" target="_blank" rel="noopener noreferrer" class="project-btn code-btn">
+                            <ion-icon name="logo-github"></ion-icon> <span class="t-source-code">GitHub Repo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Content Planner OS -->
+                <div class="bento-card project-card card-span-2">
+                    <div class="project-header">
+                        <span class="project-badge web"><ion-icon name="desktop-outline"></ion-icon> Web Application</span>
+                        <h3 class="project-title">Content Planner OS</h3>
+                    </div>
+                    <p class="t-content-planner-desc project-desc">Streamlined web-based workspace for tech content creators to structure video ideas, schedule scripts, and manage multi-platform content publishing workflows.</p>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag js">JavaScript</span>
+                        <span class="skill-tag html">HTML5</span>
+                        <span class="skill-tag css">CSS3</span>
+                        <span class="skill-tag">Workflow OS</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://nrusimhavadrevu.github.io/content_planner_os/" target="_blank" rel="noopener noreferrer" class="project-btn demo-btn">
+                            <ion-icon name="globe-outline"></ion-icon> <span class="t-live-demo">Live Website</span>
+                        </a>
+                        <a href="https://github.com/NrusimhaVadrevu/content_planner_os" target="_blank" rel="noopener noreferrer" class="project-btn code-btn">
+                            <ion-icon name="logo-github"></ion-icon> <span class="t-source-code">GitHub Repo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Morse Code Converter -->
+                <div class="bento-card project-card card-span-2">
+                    <div class="project-header">
+                        <span class="project-badge tool"><ion-icon name="key-outline"></ion-icon> Python GUI & Security</span>
+                        <h3 class="project-title">Morse Code Converter</h3>
+                    </div>
+                    <p class="t-morse-code-desc project-desc">Graphical User Interface (GUI) tool built with Python for instant bidirectional text-to-Morse code translation, audio signal playback, and data encoding.</p>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag python">Python</span>
+                        <span class="skill-tag">Tkinter GUI</span>
+                        <span class="skill-tag">Cryptography</span>
+                        <span class="skill-tag">Algorithms</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://nrusimhavadrevu.github.io/Morse_code_converter/" target="_blank" rel="noopener noreferrer" class="project-btn demo-btn">
+                            <ion-icon name="globe-outline"></ion-icon> <span class="t-live-demo">Live Website</span>
+                        </a>
+                        <a href="https://github.com/NrusimhaVadrevu/Morse_code_converter" target="_blank" rel="noopener noreferrer" class="project-btn code-btn">
+                            <ion-icon name="logo-github"></ion-icon> <span class="t-source-code">GitHub Repo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Personal Portfolio -->
+                <div class="bento-card project-card card-span-2">
+                    <div class="project-header">
+                        <span class="project-badge portfolio"><ion-icon name="sparkles-outline"></ion-icon> Portfolio Website</span>
+                        <h3 class="project-title">SIMBA Portfolio</h3>
+                    </div>
+                    <p class="t-portfolio-desc project-desc">Modern glassmorphic Bento Grid portfolio website featuring real-time multi-language switcher (English, Hindi, Telugu) and interactive spotlight animations.</p>
+                    <div class="skills-list project-tags">
+                        <span class="skill-tag js">JavaScript</span>
+                        <span class="skill-tag html">HTML5</span>
+                        <span class="skill-tag css">CSS3</span>
+                        <span class="skill-tag">Bento UI</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://nrusimhavadrevu.github.io/my_portfolio/" target="_blank" rel="noopener noreferrer" class="project-btn demo-btn">
+                            <ion-icon name="globe-outline"></ion-icon> <span class="t-live-demo">Live Website</span>
+                        </a>
+                        <a href="https://github.com/NrusimhaVadrevu/my_portfolio" target="_blank" rel="noopener noreferrer" class="project-btn code-btn">
+                            <ion-icon name="logo-github"></ion-icon> <span class="t-source-code">GitHub Repo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bottom GitHub Banner Callout -->
+                <div class="bento-card github-banner-card card-span-4">
+                    <div class="github-banner-content">
+                        <div class="github-icon-wrapper">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </div>
+                        <div class="github-banner-text">
+                            <h3 class="t-github-banner-title">All the projects are on GitHub</h3>
+                            <p class="t-github-banner-desc">Explore all source code, repositories, commits, and upcoming open-source projects on my official GitHub profile.</p>
+                        </div>
+                        <a href="https://github.com/NrusimhaVadrevu?tab=repositories" target="_blank" rel="noopener noreferrer" class="github-cta-btn">
+                            <ion-icon name="logo-github"></ion-icon>
+                            <span class="t-github-btn-text">View All Projects on GitHub</span>
+                            <ion-icon name="open-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Let's Connect Tab Pane -->
+            <div id="connect-tab" class="bento-grid tab-pane">
+                <div class="bento-card connect-hero-card card-span-4">
+                    <div class="connect-hero-content">
+                        <span class="connect-badge"><ion-icon name="chatbubbles-outline"></ion-icon> Get In Touch</span>
+                        <h2 class="t-connect-title">Let's Work Together & Connect</h2>
+                        <p class="t-connect-desc">Whether you have a project idea, security query, tech content collaboration, or just want to say hi, feel free to reach out across any platform!</p>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bento-card connect-option-card card-span-2">
+                    <div class="connect-card-icon email-icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="connect-card-info">
+                        <h3>Email</h3>
+                        <p>Direct inbox for project inquiries and formal requests.</p>
+                        <a href="mailto:nrusimhavadrevu@gmail.com" class="connect-link-btn email" target="_blank" rel="noopener noreferrer">
+                            <span>nrusimhavadrevu@gmail.com</span>
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Card -->
+                <div class="bento-card connect-option-card card-span-2">
+                    <div class="connect-card-icon linkedin-icon">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </div>
+                    <div class="connect-card-info">
+                        <h3>LinkedIn</h3>
+                        <p>Professional networking, updates, and career connections.</p>
+                        <a href="https://www.linkedin.com/in/nrusimha-vadrevu-54181136a" class="connect-link-btn linkedin" target="_blank" rel="noopener noreferrer">
+                            <span>Nrusimha Vadrevu</span>
+                            <ion-icon name="open-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- X / Twitter Card -->
+                <div class="bento-card connect-option-card card-span-2">
+                    <div class="connect-card-icon twitter-icon">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div class="connect-card-info">
+                        <h3>X (Twitter)</h3>
+                        <p>Tech thoughts, coding updates, and cybersecurity discussions.</p>
+                        <a href="https://x.com/i_nrusimha" class="connect-link-btn twitter" target="_blank" rel="noopener noreferrer">
+                            <span>@i_nrusimha</span>
+                            <ion-icon name="open-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Instagram Card -->
+                <div class="bento-card connect-option-card card-span-2">
+                    <div class="connect-card-icon instagram-icon">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+                    <div class="connect-card-info">
+                        <h3>Instagram</h3>
+                        <p>Programming content, tech simplification reels & journey updates.</p>
+                        <a href="https://www.instagram.com/cybersimba.ai/" class="connect-link-btn instagram" target="_blank" rel="noopener noreferrer">
+                            <span>@cybersimba.ai</span>
+                            <ion-icon name="open-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GitHub Profile Card -->
+                <div class="bento-card connect-option-card card-span-4">
+                    <div class="connect-card-icon github-icon">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </div>
+                    <div class="connect-card-info">
+                        <h3>GitHub Profile</h3>
+                        <p>Check out my open-source contributions, code repositories, and active projects.</p>
+                        <a href="https://github.com/NrusimhaVadrevu" class="connect-link-btn github" target="_blank" rel="noopener noreferrer">
+                            <span>github.com/NrusimhaVadrevu</span>
+                            <ion-icon name="open-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
